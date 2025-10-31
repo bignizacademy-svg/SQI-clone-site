@@ -1,0 +1,494 @@
+/* ==============================
+   SQI CLONE - RESPONSIVENESS FIX
+   ============================== */
+
+/* Global reset for mobile layouts */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== TABLET VIEW (max 1080px) ========== */
+@media (max-width: 1080px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+  }
+
+  .navbar img {
+    margin-right: 0;
+    width: 120px;
+  }
+
+  .navbar span {
+    display: none;
+  }
+
+  /* Hamburger menu (you can add JS toggle if needed) */
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    color: #000e42;
+    cursor: pointer;
+  }
+  
+
+  .section {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 30px 30px;
+  }
+
+  .h11 {
+    font-size: 45px;
+    width: 100%;
+    line-height: 55px;
+  }
+
+  .p1 {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .section2 {
+    padding: 60px 40px;
+  }
+
+  .mother {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .section3 {
+    padding: 60px 40px;
+  }
+
+  .grandmother {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .section4 {
+    grid-template-columns: 1fr;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .mother3,
+  .mother11,
+  .mother12,
+  .mother13 {
+    width: 100%;
+    padding: 40px;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .section5 {
+    padding: 40px 20px;
+  }
+
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 30px auto;
+    justify-items: center;
+  }
+
+  .section6 {
+    padding: 60px 40px;
+  }
+
+  .div {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .section7 {
+    padding: 80px 40px;
+  }
+
+  .section7 > div {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section8 {
+    padding: 60px 40px;
+  }
+
+  .section8 h2 {
+    font-size: 40px;
+  }
+
+  .section8 .ps {
+    width: 100%;
+  }
+
+  .section9 {
+    padding: 80px 40px;
+  }
+
+  .btncon {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .con {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .section10 {
+    padding: 60px 30px;
+  }
+
+  .Take {
+    position: relative;
+    left: 0;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .Take p {
+    width: 100%;
+  }
+
+  .section11 {
+    padding: 60px 40px;
+  }
+
+  .location {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .section12 {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Fix overflow issue */
+  * {
+    max-width: 100%;
+  }
+}
+
+/* ========== MOBILE VIEW (max 768px) ========== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+
+  .section {
+    padding: 120px 20px 40px;
+  }
+
+  .h11 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .p1 {
+    font-size: 15px;
+  }
+
+  .btn1 {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+
+  .section2 h1 {
+    font-size: 30px;
+  }
+
+  .child > p {
+    width: 100%;
+  }
+
+  .section4 {
+    padding: 40px 20px;
+  }
+
+  .mother3,
+  .mother11,
+  .mother12,
+  .mother13 {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .section5 {
+    padding: 30px 15px;
+  }
+
+  .logo-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .section6 {
+    padding: 40px 20px;
+  }
+
+  .div {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section7,
+  .section8,
+  .section9,
+  .section10,
+  .section11 {
+    padding: 40px 20px;
+  }
+
+  .section8 h2 {
+    font-size: 32px;
+  }
+
+  .con {
+    grid-template-columns: 1fr;
+  }
+
+  .location {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section12 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  html, body {
+    background: #fff;
+    overflow-x: hidden;
+  }
+}
+
+/* ========== SMALL DEVICES (max 480px) ========== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+  }
+
+  .navbar img {
+    width: 100px;
+  }
+
+  .section {
+    padding: 100px 10px;
+  }
+
+  .h11 {
+    font-size: 24px;
+    line-height: 35px;
+    width: 100%;
+  }
+
+  .p1 {
+    font-size: 14px;
+    line-height: 22px;
+    width: 100%;
+  }
+
+  .btn1 {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+
+  .section4,
+  .section5,
+  .section6,
+  .section7,
+  .section8,
+  .section9,
+  .section10,
+  .section11 {
+    padding: 20px 10px;
+  }
+
+  .section8 h2 {
+    font-size: 26px;
+  }
+
+  .Take h2 {
+    font-size: 28px;
+  }
+
+  .Take p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .Take button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .location {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .section12 {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  * {
+    max-width: 100%;
+  }
+}
+/* ============================
+   FINAL CENTER ALIGNMENT FIX (TABLET & BELOW)
+   ============================ */
+
+@media (max-width: 1080px) {
+  /* Make sure every section content centers neatly */
+  .section,
+  .section2,
+  .section3,
+  .section4,
+  .section5,
+  .section6,
+  .section7,
+  .section8,
+  .section9,
+  .section10,
+  .section11,
+  .section12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .section {
+    padding-top: 200px;
+  }
+
+  /* For flex-based containers inside sections */
+  .mother,
+  .mother2,
+  .mother3,
+  .mother11,
+  .mother12,
+  .mother13,
+  .grandmother,
+  .div,
+  .location,
+  .logo-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Fix inner texts and buttons alignment */
+  h1, h2, h3, p, button {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Make sure images stay centered */
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* Fix for unwanted page overflow shifting the whole site */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make sure everything aligns properly in center */
+body {
+  display: block;
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+/* Fix for hero section being covered by navbar */
+
+/* Menu toggle hidden on large screens */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #081F89;
+}
+
+input {
+    display: none;
+}
+
+/* Default navbar layout (desktop/tablet) */
+/* .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 999;
+  padding: 10px 0;
+} */
+
+/* Hide menu items on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 35;
+  }
+
+  .navbar span {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  /* When checkbox is checked, show menu */
+  #nav-toggle:checked ~ span {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  
+
+  .navbar img {
+    width: 70px;
+  }
+}
